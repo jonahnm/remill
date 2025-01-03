@@ -1,4 +1,4 @@
-name: VCPKG Continuous Integration
+name: Build
 
 on:
   # Run this workflow once every 6 hours against the master branch
