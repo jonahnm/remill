@@ -109,19 +109,19 @@ jobs:
           echo ::set-output name=TGZ_PACKAGE_PATH::remill-rel/$(ls *.tar.gz)
 
       - name: Store the DEB package
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.image.name }}-${{ matrix.image.tag }}_llvm${{ matrix.llvm }}_deb_package
           path: ${{ steps.package_names.outputs.DEB_PACKAGE_PATH }}
 
       - name: Store the RPM package
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.image.name }}-${{ matrix.image.tag }}_llvm${{ matrix.llvm }}_rpm_package
           path: ${{ steps.package_names.outputs.RPM_PACKAGE_PATH }}
 
       - name: Store the TGZ package
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.image.name }}-${{ matrix.image.tag }}_llvm${{ matrix.llvm }}_tgz_package
           path: ${{ steps.package_names.outputs.TGZ_PACKAGE_PATH }}
